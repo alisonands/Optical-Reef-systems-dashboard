@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segmented Space Telescope Mirror</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
+
+  :root {
+    --silver: #b8c8d8;
+    --silver-dim: #3a4a58;
+    --silver-glow: rgba(160,200,230,0.3);
+    --silver-bright: #e8f0f8;
+    --bg: #05080f;
+    --panel: rgba(6,10,20,0.92);
+    --border: rgba(160,200,230,0.25);
+    --text: #7a9ab8;
+    --text-dim: #2a3a4a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 8% 18%,  rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 28% 62%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 52% 8%,  rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 71% 77%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 84% 32%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 18% 88%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 52%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 44% 43%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(2px 2px at 62% 68%, rgba(220,235,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 13% 53%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 76% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 30%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(2px 2px at 55% 88%, rgba(220,235,255,0.4) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    letter-spacing: 0.15em;
+    color: var(--silver-bright);
+    text-shadow: 0 0 20px var(--silver-glow), 0 0 60px rgba(160,200,230,0.15);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--text-dim);
+    margin-top: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+  }
+
+  canvas {
+    display: block;
+    border-radius: 50%;
+    box-shadow:
+      0 0 60px rgba(140,180,220,0.12),
+      0 0 120px rgba(140,180,220,0.05);
+    background: radial-gradient(ellipse at center, #080e1a 0%, #020408 100%);
+  }
+
+  .control-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(160,200,230,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .control-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--silver), transparent);
+  }
+
+  .panel-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .slider-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: linear-gradient(90deg, var(--silver) var(--pct, 0%), var(--silver-dim) var(--pct, 0%));
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--silver-bright);
+    box-shadow: 0 0 10px var(--silver-glow), 0 0 20px var(--silver-glow);
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 16px rgba(200,230,255,0.8), 0 0 32px var(--silver-glow);
+  }
+
+  input[type="number"] {
+    width: 60px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--silver-bright);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  input[type="number"]:focus {
+    border-color: var(--silver);
+    box-shadow: 0 0 8px var(--silver-glow);
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button { opacity: 0; }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(160,200,230,0.08);
+  }
+
+  .stat { text-align: center; }
+
+  .stat-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--silver-bright);
+    text-shadow: 0 0 10px var(--silver-glow);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  footer {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    opacity: 0.45;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Segmented Mirror Array</h1>
+  <p class="subtitle">Space Telescope Optical Configuration Simulator</p>
+</header>
+
+<main>
+  <canvas id="mirror" width="560" height="560"></canvas>
+
+  <div class="control-panel">
+    <div class="panel-label">// Mirror Configuration Parameters</div>
+    <div class="slider-row">
+      <span class="slider-label">RINGS</span>
+      <input type="range" id="ringSlider" min="1" max="12" value="3" step="1">
+      <input type="number" id="ringNumber" min="1" max="12" value="3">
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-value" id="statSegments">7</div>
+        <div class="stat-label">Segments</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="statRings">3</div>
+        <div class="stat-label">Rings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="statArea">—</div>
+        <div class="stat-label">Rel. Area</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>OPTICAL SYSTEMS SIMULATOR &nbsp;|&nbsp; HEXAGONAL APERTURE ARRAY &nbsp;|&nbsp; INSPIRED BY JWST</footer>
+
+<script>
+  const canvas = document.getElementById('mirror');
+  const ctx = canvas.getContext('2d');
+  const slider = document.getElementById('ringSlider');
+  const numInput = document.getElementById('ringNumber');
+
+  const MAX_RINGS = 12;
+  let currentRings = 1; // starts at 1, then setRings(3) animates up
+
+  // Per-segment fade-in alpha
+  let animState = new Map(); // hexKey -> alpha
+
+  function hexKey(q, r) { return `${q},${r}`; }
+
+  // All axial coords within `rings` rings (ring 1 = center segment only)
+  function getHexCoords(rings) {
+    const n = rings - 1;
+    const coords = [];
+    for (let q = -n; q <= n; q++) {
+      const r1 = Math.max(-n, -q - n);
+      const r2 = Math.min(n, -q + n);
+      for (let r = r1; r <= r2; r++) {
+        coords.push([q, r]);
+      }
+    }
+    return coords;
+  }
+
+  // Pointy-top hex: axial (q,r) → pixel offset from center, given circumradius `size`
+  // For perfect tiling, spacing between adjacent centers = sqrt(3) * size (horizontal)
+  // and 1.5 * size (vertical diagonal).
+  function hexToPixel(q, r, size) {
+    const x = size * 1.5 * q;
+    const y = size * Math.sqrt(3) * (r + q / 2);
+    return [x, y];
+  }
+
+  // Pointy-top corners
+  function hexCorners(cx, cy, size) {
+    const pts = [];
+    for (let i = 0; i < 6; i++) {
+      const angle = (Math.PI / 3) * i; // 0° = flat top
+      pts.push([cx + size * Math.cos(angle), cy + size * Math.sin(angle)]);
+    }
+    return pts;
+  }
+
+  function getRing(q, r) {
+    return Math.max(Math.abs(q), Math.abs(r), Math.abs(q + r));
+  }
+
+  function totalSegments(rings) {
+    return 3 * (rings - 1) * rings + 1;
+  }
+
+  // Compute circumradius so the full array fits within 90% of half the canvas
+  function computeHexSize(rings) {
+    const n = Math.max(rings - 1, 0);
+    // Farthest hex center in pixels = sqrt(3) * size * n  (approx, along q-axis)
+    // Farthest vertex of that hex = farthest center + size
+    // So total reach ~ size * (sqrt(3)*n + 1)
+    // We want that <= (canvas.width/2) * 0.90
+    const maxReach = (canvas.width / 2) * 0.90;
+    return maxReach / (1.5 * n + 1);
+  }
+
+  const GAP = 1.5; // inset each vertex by this many pixels toward center
+
+  function drawHex(cx, cy, size, alpha, ringIdx, maxRing) {
+    const corners = hexCorners(cx, cy, size);
+
+    // Inset corners toward center to create a clean gap between segments
+    const inset = corners.map(([px, py]) => {
+      const dx = cx - px, dy = cy - py;
+      const d = Math.sqrt(dx * dx + dy * dy);
+      return [px + (dx / d) * GAP, py + (dy / d) * GAP];
+    });
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+
+    // Clip to inset shape
+    ctx.beginPath();
+    ctx.moveTo(inset[0][0], inset[0][1]);
+    for (let i = 1; i < 6; i++) ctx.lineTo(inset[i][0], inset[i][1]);
+    ctx.closePath();
+    ctx.clip();
+
+    // White/silver gradient: bright highlights, outer rings barely dimmer
+    const t = maxRing > 0 ? ringIdx / maxRing : 0;
+    const hiVal  = Math.round(248 - t * 10); // near-white highlight
+    const midVal = Math.round(195 - t * 12);
+    const lowVal = Math.round(130 - t * 10);
+
+    const grad = ctx.createLinearGradient(
+      cx - size * 0.7, cy - size * 0.7,
+      cx + size * 0.6, cy + size * 0.6
+    );
+    grad.addColorStop(0,    `rgb(${hiVal}, ${hiVal}, ${hiVal + 4})`);
+    grad.addColorStop(0.38, `rgb(${midVal}, ${midVal + 1}, ${midVal + 5})`);
+    grad.addColorStop(1,    `rgb(${lowVal}, ${lowVal + 1}, ${lowVal + 6})`);
+
+    ctx.beginPath();
+    ctx.moveTo(inset[0][0], inset[0][1]);
+    for (let i = 1; i < 6; i++) ctx.lineTo(inset[i][0], inset[i][1]);
+    ctx.closePath();
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Bright specular shimmer
+    const spec = ctx.createLinearGradient(cx - size * 0.4, cy - size * 0.55, cx, cy + size * 0.1);
+    spec.addColorStop(0,   'rgba(255,255,255,0.45)');
+    spec.addColorStop(0.4, 'rgba(255,255,255,0.10)');
+    spec.addColorStop(1,   'rgba(255,255,255,0)');
+    ctx.beginPath();
+    ctx.moveTo(inset[0][0], inset[0][1]);
+    for (let i = 1; i < 6; i++) ctx.lineTo(inset[i][0], inset[i][1]);
+    ctx.closePath();
+    ctx.fillStyle = spec;
+    ctx.fill();
+
+    ctx.restore();
+
+    // Subtle edge line
+    ctx.save();
+    ctx.globalAlpha = alpha * 0.55;
+    ctx.beginPath();
+    ctx.moveTo(inset[0][0], inset[0][1]);
+    for (let i = 1; i < 6; i++) ctx.lineTo(inset[i][0], inset[i][1]);
+    ctx.closePath();
+    ctx.strokeStyle = 'rgba(220, 230, 245, 0.7)';
+    ctx.lineWidth = 0.6;
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function draw() {
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    const cx = W / 2, cy = H / 2;
+    const size = computeHexSize(targetRings);
+    const maxRing = targetRings - 1;
+
+    // Ambient glow
+    const glowR = size * (Math.sqrt(3) * Math.max(targetRings - 1, 0) + 1) * 1.4;
+    const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowR);
+    glow.addColorStop(0,   'rgba(160,200,240,0.06)');
+    glow.addColorStop(0.6, 'rgba(140,180,220,0.02)');
+    glow.addColorStop(1,   'rgba(0,0,0,0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, W, H);
+
+    // Only render coords belonging to targetRings (shrink is instant, no ghost segments)
+    const coords = getHexCoords(targetRings);
+    const sorted = [...coords].sort((a, b) => getRing(b[0], b[1]) - getRing(a[0], a[1]));
+
+    sorted.forEach(([q, r]) => {
+      const key = hexKey(q, r);
+      const [px, py] = hexToPixel(q, r, size);
+      const ring = getRing(q, r);
+      // animState entry means segment is fading in; no entry means fully settled (alpha=1)
+      const alpha = animState.has(key) ? animState.get(key).current : 1;
+      if (alpha > 0.001) drawHex(cx + px, cy + py, size, alpha, ring, maxRing);
+    });
+
+    // Stats
+    const total = totalSegments(targetRings);
+    document.getElementById('statSegments').textContent = total;
+    document.getElementById('statRings').textContent = targetRings;
+    document.getElementById('statArea').textContent = (total / totalSegments(3)).toFixed(2) + '×';
+  }
+
+  let rafId = null;
+  let targetRings = 1;
+
+  // animState: key -> { from, current }  (only for mid-fade segments)
+  // Settled segments (alpha=1) have NO entry in animState — draw() defaults to 1.
+  // Shrinking is instant and clears animState entirely.
+
+  let tweenStart = 0;
+  const DURATION = 320;
+
+  function animStep(now) {
+    const pct  = Math.min((now - tweenStart) / DURATION, 1);
+    const ease = 1 - Math.pow(1 - pct, 3);
+
+    animState.forEach((entry, k) => {
+      entry.current = entry.from + (1 - entry.from) * ease;
+    });
+
+    draw();
+
+    if (pct < 1) {
+      rafId = requestAnimationFrame(animStep);
+    } else {
+      // All done — clear animState (draw() will default every key to alpha 1)
+      animState.clear();
+      rafId = null;
+      draw();
+    }
+  }
+
+  function setRings(val) {
+    val = Math.max(1, Math.min(MAX_RINGS, parseInt(val) || 1));
+    if (isNaN(val)) return;
+
+    slider.value = val;
+    numInput.value = val;
+    const pct = ((val - 1) / (MAX_RINGS - 1)) * 100;
+    slider.style.setProperty('--pct', pct + '%');
+
+    if (val === targetRings) return;
+
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+
+    if (val < targetRings) {
+      // Shrink: instant, no animation
+      animState.clear();
+      targetRings = val;
+      currentRings = val;
+      draw();
+    } else {
+      // Grow: new keys start from 0, existing mid-fade keys keep their current progress
+      const oldKeySet = new Set(getHexCoords(targetRings).map(([q,r]) => hexKey(q,r)));
+      const allNewKeys = getHexCoords(val).map(([q,r]) => hexKey(q,r));
+
+      // Rebase any existing mid-fade entries to their current alpha as new `from`
+      const nextState = new Map();
+      allNewKeys.forEach(k => {
+        if (!oldKeySet.has(k)) {
+          // New segment: start from current mid-fade alpha (if somehow already there) or 0
+          const existingFrom = animState.has(k) ? animState.get(k).current : 0;
+          nextState.set(k, { from: existingFrom, current: existingFrom });
+        }
+        // Settled segments (in oldKeySet) get no entry → drawn at alpha 1
+      });
+
+      animState.clear();
+      nextState.forEach((v, k) => animState.set(k, v));
+
+      targetRings = val;
+      currentRings = val;
+      tweenStart = performance.now();
+      rafId = requestAnimationFrame(animStep);
+    }
+  }
+
+  slider.addEventListener('input', () => setRings(+slider.value));
+  numInput.addEventListener('change', () => setRings(+numInput.value));
+  numInput.addEventListener('keydown', e => { if (e.key === 'Enter') setRings(+numInput.value); });
+
+  // Boot
+  currentRings = 1;
+  targetRings = 1;
+  setRings(3);
+</script>
+</body>
+</html>

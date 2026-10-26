@@ -1,0 +1,94 @@
+{
+  "id": "cdh",
+  "name": "C&DH",
+  "subtitle": "Command, data handling and onboard computing",
+  "status": "WIP",
+  "color": "#7ba0be",
+  "scope": "segment",
+  "budget": {
+    "strategy": "selected"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Mass estimate",
+      "value": 25,
+      "unit": "kg",
+      "source": "Instrumentation!B3; Instrumentation!B6"
+    },
+    {
+      "label": "Power estimate",
+      "value": 100,
+      "unit": "W",
+      "source": "Instrumentation!C3; Instrumentation!C6"
+    },
+    {
+      "label": "Architecture",
+      "value": "Dedicated C&DH plus spacecraft computer",
+      "unit": null,
+      "source": null
+    }
+  ],
+  "environment": [
+    {
+      "label": "Radiation tolerance",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Processor temperature",
+      "value": null,
+      "unit": "°C",
+      "source": null
+    },
+    {
+      "label": "Bus voltage",
+      "value": null,
+      "unit": "V",
+      "source": null
+    }
+  ],
+  "groups": [],
+  "components": [
+    {
+      "id": "cdh",
+      "name": "Command and data handling",
+      "massKg": 15,
+      "powerW": 50,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Instrumentation!B3:D3",
+      "notes": "Workbook estimate based on JWST payload design.",
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "computer",
+      "name": "Spacecraft computer",
+      "massKg": 10,
+      "powerW": 50,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Instrumentation!B6:D6",
+      "notes": "Workbook estimate based on Ariel. Possible overlap with ACS computer remains unresolved.",
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {
+    "processor": null,
+    "memoryGb": null,
+    "storageGb": null,
+    "dataRateMbps": null,
+    "timeSyncAccuracyNs": null,
+    "interface": null,
+    "softwareArchitecture": null
+  },
+  "notes": [],
+  "suggestions": [
+    "Define the split between formation-control compute, wavefront estimation and science data processing.",
+    "Track memory, storage, processing throughput, time synchronization and spacecraft interfaces.",
+    "Resolve whether the ACS and spacecraft computers share hardware before refining the mass and power estimates."
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "id": "payload",
+  "name": "Payload",
+  "subtitle": "Mirror substrate, coatings and science instrumentation",
+  "status": "Concept study",
+  "color": "#b6a0cf",
+  "scope": "segment",
+  "budget": {
+    "strategy": "payload"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Optical configuration",
+      "value": "Three-mirror anastigmat",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Primary substrate",
+      "value": "ULE, lightweight",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Coating",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Detector",
+      "value": "One free-flying observatory platform",
+      "unit": null,
+      "source": null
+    }
+  ],
+  "environment": [
+    {
+      "label": "Temperature range",
+      "value": "−100 to −30",
+      "unit": "°C",
+      "source": "Payload!D7 (rough note)"
+    },
+    {
+      "label": "Wavefront error target",
+      "value": null,
+      "unit": "nm RMS",
+      "source": null
+    },
+    {
+      "label": "Science band",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Contamination / coating lifetime",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "substrate",
+      "name": "Mirror substrate trades",
+      "description": null,
+      "selectedId": "ule_light",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "arealDensityKgM2",
+          "label": "Areal mass",
+          "unit": "kg/m²"
+        },
+        {
+          "key": "densityGcm3",
+          "label": "Density",
+          "unit": "g/cm³"
+        },
+        {
+          "key": "cte",
+          "label": "CTE (workbook note)"
+        },
+        {
+          "key": "thermalConductivity",
+          "label": "Conductivity (workbook note)"
+        },
+        {
+          "key": "stiffnessGpa",
+          "label": "Stiffness (workbook note)"
+        }
+      ],
+      "options": [
+        {
+          "id": "be",
+          "name": "Beryllium",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Mirror mass!C3; Mirror mass!D3; Mirror mass!E3; Mirror mass!H3; mirror_trades0!A6:L6",
+          "notes": "from JWST",
+          "arealDensityKgM2": 27,
+          "densityKgM3": 1850,
+          "densityGcm3": 1.85,
+          "reflectivity": null,
+          "cte": "Low",
+          "thermalConductivity": 190,
+          "stiffnessGpa": "High (287)",
+          "specificStiffness": 155.13513513513513,
+          "stability": null,
+          "cost": "High",
+          "manufacturability": null
+        },
+        {
+          "id": "zerodur",
+          "name": "Zerodur",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Mirror mass!C4; Mirror mass!D4; Mirror mass!E4; Mirror mass!H4; mirror_trades0!A4:L4",
+          "notes": null,
+          "arealDensityKgM2": null,
+          "densityKgM3": 2530,
+          "densityGcm3": 2.53,
+          "reflectivity": null,
+          "cte": "V. Low (0.1)",
+          "thermalConductivity": "Low (1.7)",
+          "stiffnessGpa": "Moderate (90)",
+          "specificStiffness": 35.57312252964427,
+          "stability": null,
+          "cost": "Moderate, costly fabrication",
+          "manufacturability": null
+        },
+        {
+          "id": "sic",
+          "name": "Silicon carbide",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": "https://accuratus.com/silicar.html",
+          "source": "Mirror mass!C5; Mirror mass!D5; Mirror mass!E5; Mirror mass!H5; mirror_trades0!A3:L3",
+          "notes": "low density designs go down to 20~40 ariel density",
+          "arealDensityKgM2": 120,
+          "densityKgM3": null,
+          "densityGcm3": null,
+          "reflectivity": null,
+          "cte": "Low (4)",
+          "thermalConductivity": "High (120)",
+          "stiffnessGpa": "V. High (410)",
+          "specificStiffness": 128.125,
+          "stability": "Weak/Brittle",
+          "cost": null,
+          "manufacturability": null,
+          "densityRangeGcm3": "~2.1–3.2 (mirror_trades0!B3)"
+        },
+        {
+          "id": "sic_light",
+          "name": "Silicon carbide, lightweight",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": "https://accuratus.com/silicar.html",
+          "source": "Mirror mass!C6; Mirror mass!D6; Mirror mass!E6; Mirror mass!H6; mirror_trades0!A3:L3",
+          "notes": "^^",
+          "arealDensityKgM2": 33,
+          "densityKgM3": null,
+          "densityGcm3": null,
+          "reflectivity": null,
+          "cte": "Low (4)",
+          "thermalConductivity": "High (120)",
+          "stiffnessGpa": "V. High (410)",
+          "specificStiffness": 128.125,
+          "stability": "Weak/Brittle",
+          "cost": null,
+          "manufacturability": null,
+          "densityRangeGcm3": "~2.1–3.2 (mirror_trades0!B3)"
+        },
+        {
+          "id": "al",
+          "name": "Aluminum",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Mirror mass!C7; Mirror mass!D7; Mirror mass!E7; Mirror mass!H7",
+          "notes": null,
+          "arealDensityKgM2": null,
+          "densityKgM3": null,
+          "densityGcm3": null,
+          "reflectivity": null,
+          "cte": null,
+          "thermalConductivity": null,
+          "stiffnessGpa": null,
+          "specificStiffness": null,
+          "stability": null,
+          "cost": null,
+          "manufacturability": null
+        },
+        {
+          "id": "ule",
+          "name": "ULE",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Mirror mass!C8; Mirror mass!D8; Mirror mass!E8; Mirror mass!H8; mirror_trades0!A7:L7",
+          "notes": "Hubble",
+          "arealDensityKgM2": 183.9,
+          "densityKgM3": 2210,
+          "densityGcm3": 2.21,
+          "reflectivity": null,
+          "cte": null,
+          "thermalConductivity": null,
+          "stiffnessGpa": null,
+          "specificStiffness": null,
+          "stability": null,
+          "cost": null,
+          "manufacturability": null
+        },
+        {
+          "id": "ule_light",
+          "name": "ULE, lightweight",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Mirror mass!C9; Mirror mass!D9; Mirror mass!E9; Mirror mass!H9; mirror_trades0!A7:L7",
+          "notes": "RST",
+          "arealDensityKgM2": 40,
+          "densityKgM3": null,
+          "densityGcm3": null,
+          "reflectivity": null,
+          "cte": null,
+          "thermalConductivity": null,
+          "stiffnessGpa": null,
+          "specificStiffness": null,
+          "stability": null,
+          "cost": null,
+          "manufacturability": null
+        },
+        {
+          "id": "fused-silica",
+          "name": "Fused silica",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A2:L2",
+          "notes": null,
+          "densityGcm3": 2.2,
+          "densityKgM3": 2200.0,
+          "arealDensityKgM2": null,
+          "reflectivity": null,
+          "cte": "Low (0.55)",
+          "thermalConductivity": "Low (1.4)",
+          "stiffnessGpa": "Moderate (73)",
+          "specificStiffness": 33.18181818181818,
+          "stability": null,
+          "cost": null,
+          "manufacturability": null
+        },
+        {
+          "id": "borosilicate",
+          "name": "Borosilicate",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A5:L5",
+          "notes": null,
+          "densityGcm3": 2.23,
+          "densityKgM3": 2230.0,
+          "arealDensityKgM2": null,
+          "reflectivity": null,
+          "cte": "Low (3.25)",
+          "thermalConductivity": "Low (1.1)",
+          "stiffnessGpa": "Moderate (64)",
+          "specificStiffness": 28.699551569506728,
+          "stability": "Weak/Brittle",
+          "cost": null,
+          "manufacturability": null
+        }
+      ]
+    },
+    {
+      "id": "coating",
+      "name": "Mirror coating trades",
+      "description": null,
+      "selectedId": "tbd",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "densityGcm3",
+          "label": "Density",
+          "unit": "g/cm³"
+        },
+        {
+          "key": "reflectivity",
+          "label": "Reflectivity / throughput"
+        },
+        {
+          "key": "cte",
+          "label": "CTE (workbook note)"
+        },
+        {
+          "key": "wavelength",
+          "label": "Wavelength"
+        }
+      ],
+      "options": [
+        {
+          "id": "tbd",
+          "name": "Coating TBD",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "source": "mirror_trades0!A12:L15",
+          "notes": "No coating is selected by the source workbook. Choose a trade candidate and enter thickness/areal density to size its mass.",
+          "arealDensityKgM2": null,
+          "densityGcm3": null,
+          "reflectivity": null,
+          "cte": null,
+          "wavelength": null
+        },
+        {
+          "id": "aluminum",
+          "name": "Aluminum",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A13:L13",
+          "notes": "Reflectivity is copied as a workbook trade note and does not establish system throughput. Coating mass requires thickness and density, or an areal mass entry.",
+          "densityGcm3": 2.7,
+          "arealDensityKgM2": null,
+          "reflectivity": "90-92% for optical",
+          "cte": "High (23.6)",
+          "thermalConductivity": "High (205)",
+          "stiffnessGpa": "Low",
+          "stability": null,
+          "cost": null,
+          "wavelength": null
+        },
+        {
+          "id": "dielectric",
+          "name": "Dielectric",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A14:L14",
+          "notes": "Reflectivity is copied as a workbook trade note and does not establish system throughput. Coating mass requires thickness and density, or an areal mass entry.",
+          "densityGcm3": null,
+          "arealDensityKgM2": null,
+          "reflectivity": "v. High >99% ",
+          "cte": "~0.5",
+          "thermalConductivity": null,
+          "stiffnessGpa": null,
+          "stability": null,
+          "cost": null,
+          "wavelength": "400-750nm"
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A15:L15",
+          "notes": "Reflectivity is copied as a workbook trade note and does not establish system throughput. Coating mass requires thickness and density, or an areal mass entry.",
+          "densityGcm3": null,
+          "arealDensityKgM2": null,
+          "reflectivity": "v. High ~98%",
+          "cte": "High(19)",
+          "thermalConductivity": null,
+          "stiffnessGpa": "Moderate (~76)",
+          "stability": "Weak (needs protective coatings)",
+          "cost": "High",
+          "wavelength": null
+        }
+      ]
+    },
+    {
+      "id": "actuator",
+      "name": "Mirror actuator trades",
+      "description": null,
+      "selectedId": "tbd",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "strokeMm",
+          "label": "Stroke",
+          "unit": "mm"
+        },
+        {
+          "key": "resolutionNm",
+          "label": "Resolution",
+          "unit": "nm"
+        }
+      ],
+      "options": [
+        {
+          "id": "tbd",
+          "name": "Mirror actuator TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Payload!A4",
+          "notes": null,
+          "strokeMm": null,
+          "resolutionNm": null
+        },
+        {
+          "id": "piezo",
+          "name": "Piezoelectric",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A18",
+          "notes": null,
+          "strokeMm": null,
+          "resolutionNm": null
+        },
+        {
+          "id": "mems",
+          "name": "MEMS",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "mirror_trades0!A19",
+          "notes": null,
+          "strokeMm": null,
+          "resolutionNm": null
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "backplane",
+      "name": "Mirror backplane assembly",
+      "massKg": 100,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Payload!B5",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "thermal-control",
+      "name": "Payload thermal control",
+      "massKg": null,
+      "powerW": 25,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Payload!C7",
+      "notes": "Allocation to thermal subsystem may be revised; counted once here.",
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "science-allowance",
+      "name": "Science instrumentation allowance",
+      "massKg": 200,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "observatory",
+      "source": "Payload!B6",
+      "notes": "Assigned once to the free-flying science platform for this architecture. The workbook had no scope definition; placement requires confirmation.",
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "detector",
+      "name": "Detector array",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "observatory",
+      "source": "Payload!A8",
+      "notes": "Detector line is unspecified. Confirm whether it is already included in the 200 kg science instrumentation allowance before adding mass.",
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "secondary",
+      "name": "Secondary mirror and support",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "observatory",
+      "source": "User concept: three-mirror anastigmat",
+      "notes": "TBD allocation; primary-only trades do not define the secondary optic.",
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "tertiary",
+      "name": "Tertiary mirror and support",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "observatory",
+      "source": "User concept: three-mirror anastigmat",
+      "notes": "TBD allocation; primary-only trades do not define the tertiary optic.",
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {
+    "cadModelUrl": null,
+    "coatingThicknessM": null,
+    "substrateThicknessM": null,
+    "substrateSolidFraction": null,
+    "wfeNmRms": null,
+    "focalLengthM": null,
+    "wavelengthNm": null
+  },
+  "notes": [
+    "Substrate areal mass and density are copied from Mirror mass; optical and thermal trade notes are copied from mirror_trades0. Manufacturer details and unsupported numeric properties remain TBD.",
+    "Passive substrate and coating power is modeled as zero. Actuation, thermal control, detector and wavefront processing power are separate items.",
+    "The workbook lightweight ULE baseline is 40 kg/m². Mirror mass changes with true hexagon area. Missing areal mass can be calculated from density × thickness × solid fraction after all inputs are entered.",
+    "Coating thickness or areal density is missing, so coating mass remains TBD. Substrate-only mass is a known subtotal.",
+    "The duplicate Payload FGS is assigned to ACS once. No 0.5 W/kg payload power proxy is used; only source equipment power is summed.",
+    "The science platform allowance is counted once across the observatory. Detector, secondary and tertiary allocations remain open. No optical ray trace or nonlinear wavefront solver is included."
+  ],
+  "suggestions": []
+}

@@ -1,0 +1,308 @@
+{
+  "id": "power",
+  "name": "Power",
+  "subtitle": "Solar generation, storage and power distribution",
+  "status": "Concept study",
+  "color": "#d3b765",
+  "scope": "segment",
+  "budget": {
+    "strategy": "selected"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Solar array",
+      "value": "Workbook panel estimate; cell type TBD",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Generated power",
+      "value": null,
+      "unit": "W",
+      "source": null
+    },
+    {
+      "label": "Battery",
+      "value": "Li-ion workbook estimate",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Array mounting",
+      "value": "One segment face, per workbook mass formula",
+      "unit": "",
+      "source": "Power!B4"
+    }
+  ],
+  "environment": [
+    {
+      "label": "Solar flux",
+      "value": null,
+      "unit": "W/m²",
+      "source": null
+    },
+    {
+      "label": "Sun distance",
+      "value": null,
+      "unit": "AU",
+      "source": null
+    },
+    {
+      "label": "Array temperature",
+      "value": null,
+      "unit": "°C",
+      "source": null
+    },
+    {
+      "label": "Required storage interval",
+      "value": null,
+      "unit": "h",
+      "source": null
+    },
+    {
+      "label": "Bus voltage",
+      "value": null,
+      "unit": "V DC",
+      "source": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "solar",
+      "name": "Solar cell and array trades",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "cellType",
+          "label": "Cell type"
+        },
+        {
+          "key": "arealMassKgM2",
+          "label": "Areal mass",
+          "unit": "kg/m²"
+        },
+        {
+          "key": "powerDensityWm2",
+          "label": "Generation density",
+          "unit": "W/m²"
+        },
+        {
+          "key": "substrate",
+          "label": "Substrate"
+        },
+        {
+          "key": "mechanism",
+          "label": "Mechanism"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Workbook solar array",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Power!B4; Power!F4",
+          "notes": "Mass is 3 kg/m² times one segment face in the workbook. The same area coupling is retained explicitly, using corrected F2F geometry. Generation, cell type, substrate and mechanism are unspecified.",
+          "cellType": null,
+          "substrate": null,
+          "mechanism": null,
+          "busAttachment": null,
+          "arealMassKgM2": 3,
+          "powerDensityWm2": null,
+          "efficiency": null
+        },
+        {
+          "id": "silicon",
+          "name": "Silicon array candidate",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "cellType": "Silicon",
+          "substrate": null,
+          "mechanism": null,
+          "busAttachment": null,
+          "arealMassKgM2": null,
+          "powerDensityWm2": null,
+          "efficiency": null
+        },
+        {
+          "id": "gaas",
+          "name": "GaAs array candidate",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "cellType": "GaAs",
+          "substrate": null,
+          "mechanism": null,
+          "busAttachment": null,
+          "arealMassKgM2": null,
+          "powerDensityWm2": null,
+          "efficiency": null
+        }
+      ]
+    },
+    {
+      "id": "battery",
+      "name": "Battery trades",
+      "description": null,
+      "selectedId": "liion",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "energyWh",
+          "label": "Energy",
+          "unit": "Wh"
+        },
+        {
+          "key": "specificEnergyWhKg",
+          "label": "Specific energy",
+          "unit": "Wh/kg"
+        },
+        {
+          "key": "capacityAh",
+          "label": "Capacity",
+          "unit": "A·h"
+        }
+      ],
+      "options": [
+        {
+          "id": "liion",
+          "name": "Li-ion workbook estimate",
+          "massKg": 7.06,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Power!B3",
+          "notes": "Only mass is supplied. Power!C3=1093.7 W is a system-load note, not battery capacity or power output.",
+          "batteryType": "Li-ion",
+          "energyWh": null,
+          "specificEnergyWhKg": null,
+          "capacityAh": null,
+          "voltageV": null
+        },
+        {
+          "id": "nih2",
+          "name": "NiH₂ candidate",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "batteryType": "NiH₂",
+          "energyWh": null,
+          "specificEnergyWhKg": null,
+          "capacityAh": null,
+          "voltageV": null
+        },
+        {
+          "id": "nicd",
+          "name": "NiCd candidate",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "batteryType": "NiCd",
+          "energyWh": null,
+          "specificEnergyWhKg": null,
+          "capacityAh": null,
+          "voltageV": null
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "distribution-allowance",
+      "name": "Unallocated power hardware allowance",
+      "massKg": 30.402985573365115,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Power!B6 minus Power!B3:B4",
+      "notes": "Residual from the original 55 kg aggregate at workbook geometry. Kept fixed while array mass changes with geometry. It is not a verified PCU mass. PCU, tracker, charger and cabling fields below further define this allowance without adding duplicate mass.",
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {
+    "arrayAreaMode": "segmentFace",
+    "arrayAreaM2": null,
+    "arrayFaceFraction": 1,
+    "solarFluxWm2": null,
+    "distanceAU": null,
+    "arrayPointingFactor": null,
+    "arrayTemperatureFactor": null,
+    "pmadEfficiency": null,
+    "storageIntervalH": null,
+    "batteryDepthOfDischarge": null,
+    "batteryDischargeEfficiency": null
+  },
+  "notes": [
+    "The workbook 55 kg total exceeds the identified 7.06 kg battery and 17.537 kg array. The 30.403 kg difference is retained as an explicit unallocated allowance.",
+    "Solar mass follows one segment face because Power!B4 explicitly uses 3 × main!B6. Set parameters.arrayAreaMode to fixed and enter arrayAreaM2 to decouple it from aperture size.",
+    "Generated power stays TBD until powerDensityWm2 or all efficiency-model inputs are entered. Storage remains TBD until energy or specific energy/capacity data are entered. No EOL generation or power-closure check is shown."
+  ],
+  "suggestions": [],
+  "inventory": [
+    {
+      "name": "Power control unit",
+      "massKg": null,
+      "powerW": null,
+      "source": "Power!A5",
+      "notes": "Specify within the unallocated hardware allowance, then replace that allowance when itemizing the budget."
+    },
+    {
+      "name": "Peak power tracker",
+      "massKg": null,
+      "powerW": null,
+      "source": "User study outline",
+      "notes": "Specify within the unallocated hardware allowance, then replace that allowance when itemizing the budget."
+    },
+    {
+      "name": "Battery charger",
+      "massKg": null,
+      "powerW": null,
+      "source": "User study outline",
+      "notes": "Specify within the unallocated hardware allowance, then replace that allowance when itemizing the budget."
+    },
+    {
+      "name": "Cabling",
+      "massKg": null,
+      "powerW": null,
+      "source": "User study outline",
+      "notes": "Specify within the unallocated hardware allowance, then replace that allowance when itemizing the budget."
+    }
+  ]
+}

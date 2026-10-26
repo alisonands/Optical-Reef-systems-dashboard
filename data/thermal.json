@@ -1,0 +1,246 @@
+{
+  "id": "thermal",
+  "name": "Thermal",
+  "subtitle": "Passive control, heat transport and active cooling",
+  "status": "WIP",
+  "color": "#ba8c9a",
+  "scope": "segment",
+  "budget": {
+    "strategy": "selected"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Known hardware mass",
+      "value": 5,
+      "unit": "kg",
+      "source": "Thermal!B3"
+    },
+    {
+      "label": "Thermal power",
+      "value": null,
+      "unit": "W",
+      "source": null
+    },
+    {
+      "label": "Workbook rough CBE",
+      "value": "~20 kg / ~100–500 W",
+      "unit": "",
+      "source": "Thermal!B11:C11"
+    }
+  ],
+  "environment": [
+    {
+      "label": "Payload temperature range",
+      "value": "−100 to −30",
+      "unit": "°C",
+      "source": "Payload!D7 (rough note)"
+    },
+    {
+      "label": "Heat-pipe working fluid",
+      "value": "Hydrogen / nitrogen / acetone, dependent on temperature",
+      "unit": "",
+      "source": "Thermal!D6"
+    },
+    {
+      "label": "Sink temperature",
+      "value": null,
+      "unit": "K",
+      "source": null
+    },
+    {
+      "label": "Allowable mirror gradient",
+      "value": null,
+      "unit": "K",
+      "source": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "cooling",
+      "name": "Cooling architecture",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Cooler estimate",
+          "massKg": 5,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "Thermal!B3",
+          "notes": null
+        },
+        {
+          "id": "pumped",
+          "name": "Pumped-loop candidate",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "insulation",
+      "name": "Insulation",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Thermal!A4",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "radiator",
+      "name": "Radiator",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Thermal!A5",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "heat-pipe",
+      "name": "Heat pipe",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Thermal!A6",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "thermostat",
+      "name": "Thermostat",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Thermal!A7",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "louvers",
+      "name": "Louvers",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Thermal!A8",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "heater",
+      "name": "Electrical heaters",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Thermal!A9",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "blanket",
+      "name": "Thermal blanket",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "User study outline",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "switches",
+      "name": "Thermal switches",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "User study outline",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "coatings",
+      "name": "Thermal coatings",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "User study outline",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "sunshield",
+      "name": "Sunshield",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Misc!A4",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {
+    "radiatorAreaM2": null,
+    "emissivity": null,
+    "absorptivity": null,
+    "sinkTemperatureK": null,
+    "radiatorTemperatureK": null,
+    "heatLoadW": null,
+    "heaterPowerW": null,
+    "temperatureGradientK": null
+  },
+  "notes": [
+    "The 5 kg cooler line is the only numeric hardware estimate in the thermal sheet. Other required items remain TBD; the rough ~20 kg / ~100–500 W CBE is retained as a source note and is not added on top.",
+    "Payload thermal-control power (25 W from Payload!C7) remains on the Payload page until the allocation is resolved.",
+    "Heat-pipe working fluids and louver reference are copied from workbook notes and have not been validated."
+  ],
+  "suggestions": [
+    "Separate mirror stability, electronics cooling and detector cooling requirements.",
+    "Enter heat loads, temperature bands, surface properties and radiator area as the thermal design develops.",
+    "Record each heater or cooler on one budget line to avoid overlap with Payload."
+  ]
+}

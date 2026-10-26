@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "name": "Optical Reef",
+  "subtitle": "Autonomously assembled space telescope",
+  "description": "A modular three-mirror anastigmat with independent hexagonal mirror spacecraft, a free-flying detector platform, formation control and computational wavefront correction.",
+  "geometry": {
+    "rings": 2,
+    "flatToFlatM": 3,
+    "minRings": 1,
+    "maxRings": 12,
+    "minFlatToFlatM": 0.5,
+    "maxFlatToFlatM": 10
+  },
+  "sourceWorkbook": "BUDGETS_final.xlsx",
+  "subsystemOrder": [
+    "propulsion",
+    "acs",
+    "power",
+    "structure",
+    "cdh",
+    "thermal",
+    "comms",
+    "payload"
+  ],
+  "notes": [
+    "Rings follows hex_mirror.html: 1 = central segment only; 2 = center plus one surrounding ring (7 segments). Workbook main!B3=1 counts surrounding rings, so it is represented as 2 here.",
+    "F2F is the distance across opposite flats. The workbook used F2F/2 as a circumradius. The corrected segment area is sqrt(3)/2 × F2F², rather than 3sqrt(3)/8 × F2F². All area-driven calculations use the corrected geometry.",
+    "Headline mass and power are known subtotals. TBD values remain null and mark results incomplete. No design margins, operating modes, or reliability-count models are applied.",
+    "Per-segment totals cover each mirror spacecraft. Observatory totals add the one-off free-flying science/detector platform separately. The 200 kg workbook science-instrumentation allowance is assigned to that platform pending confirmation.",
+    "The 1.6 kg / 10.5 W FGS entry occurs in both Payload and ACS. It is counted once in ACS pending confirmation that these are distinct units.",
+    "C&DH includes the separate Instrumentation computer line. Its possible overlap with the ACS computer remains unresolved."
+  ]
+}

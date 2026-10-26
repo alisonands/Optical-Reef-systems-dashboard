@@ -1,0 +1,517 @@
+{
+  "id": "acs",
+  "name": "ACS",
+  "subtitle": "Attitude determination, pointing and control",
+  "status": "Concept study",
+  "color": "#8984c4",
+  "scope": "segment",
+  "budget": {
+    "strategy": "selected"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Control actuators",
+      "value": "4 reaction wheels",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Selected sensors",
+      "value": "Fine guidance sensor, IMU, Sun sensor",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Pointing accuracy",
+      "value": null,
+      "unit": "deg",
+      "source": null
+    }
+  ],
+  "environment": [
+    {
+      "label": "Orbit / location",
+      "value": "L2 concept assumption",
+      "unit": "",
+      "source": "ACS!D9"
+    },
+    {
+      "label": "Operating temperature",
+      "value": null,
+      "unit": "°C",
+      "source": null
+    },
+    {
+      "label": "Radiation environment",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Pointing requirement",
+      "value": null,
+      "unit": "deg",
+      "source": null
+    },
+    {
+      "label": "Formation metrology",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "reaction-wheels",
+      "name": "Reaction wheels",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 4,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "angularMomentumNms",
+          "label": "Momentum",
+          "unit": "N·m·s"
+        },
+        {
+          "key": "outputTorqueNm",
+          "label": "Torque",
+          "unit": "N·m"
+        },
+        {
+          "key": "wheelRpm",
+          "label": "Speed",
+          "unit": "rpm"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Reaction wheel estimate",
+          "massKg": 12,
+          "powerW": 50,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "ACS!B3:D3",
+          "notes": "Workbook values 48 kg and 200 W cover approximately 4 wheels. Unit values divide those totals by four. Torque range is copied from the note and is not a selected product rating.",
+          "angularMomentumNms": null,
+          "outputTorqueNm": "~0.012–0.4",
+          "wheelRpm": null,
+          "busVoltageV": null,
+          "integralElectronics": null,
+          "diameterMm": null,
+          "heightMm": null,
+          "tempLowC": null,
+          "tempHighC": null
+        },
+        {
+          "id": "candidate",
+          "name": "Reaction wheel candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": null,
+          "angularMomentumNms": null,
+          "outputTorqueNm": null,
+          "wheelRpm": null,
+          "busVoltageV": null,
+          "integralElectronics": null,
+          "diameterMm": null,
+          "heightMm": null,
+          "tempLowC": null,
+          "tempHighC": null
+        }
+      ]
+    },
+    {
+      "id": "fine-guidance",
+      "name": "Fine guidance sensors",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Fine guidance sensor estimate",
+          "massKg": 1.6,
+          "powerW": 10.5,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "ACS!B4:D4",
+          "notes": "Ariel-based workbook estimate. The duplicate Payload FGS line is counted only here.",
+          "accuracyDeg": null
+        },
+        {
+          "id": "candidate",
+          "name": "Fine guidance sensor candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    },
+    {
+      "id": "inertial",
+      "name": "Inertial sensing",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Inertial measurement unit estimate",
+          "massKg": 8,
+          "powerW": 35,
+          "manufacturer": null,
+          "model": null,
+          "url": "https://www.cielo-inertial.com/wp-content/uploads/2019/10/Cielo_Starlight_1000_IRU24_Datasheet.pdf",
+          "source": "ACS!B5:D5",
+          "notes": null,
+          "accuracyDeg": null
+        },
+        {
+          "id": "candidate",
+          "name": "IMU candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    },
+    {
+      "id": "sun",
+      "name": "Sun sensors",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Sun sensor estimate",
+          "massKg": 0.025,
+          "powerW": 0.1,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "ACS!B7:C7",
+          "notes": null,
+          "accuracyDeg": null
+        },
+        {
+          "id": "candidate",
+          "name": "Sun sensor candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    },
+    {
+      "id": "magnetometer",
+      "name": "Magnetometer",
+      "description": null,
+      "selectedId": "none",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "none",
+          "name": "Not selected",
+          "massKg": 0,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": "Excluded candidate. Zero contribution means this option is not in the current architecture."
+        },
+        {
+          "id": "candidate",
+          "name": "Magnetometer candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    },
+    {
+      "id": "star-tracker",
+      "name": "Star trackers and cameras",
+      "description": null,
+      "selectedId": "none",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "none",
+          "name": "Not selected",
+          "massKg": 0,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": "Excluded candidate. Zero contribution means this option is not in the current architecture."
+        },
+        {
+          "id": "candidate",
+          "name": "Star trackers and cameras candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    },
+    {
+      "id": "star-scanner",
+      "name": "Star scanner",
+      "description": null,
+      "selectedId": "none",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "none",
+          "name": "Not selected",
+          "massKg": 0,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": "Excluded candidate. Zero contribution means this option is not in the current architecture."
+        },
+        {
+          "id": "candidate",
+          "name": "Star scanner candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    },
+    {
+      "id": "gps",
+      "name": "GPS receiver",
+      "description": null,
+      "selectedId": "none",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "accuracyDeg",
+          "label": "Accuracy",
+          "unit": "deg"
+        }
+      ],
+      "options": [
+        {
+          "id": "none",
+          "name": "Not selected",
+          "massKg": 0,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": null,
+          "notes": "Excluded candidate. Zero contribution means this option is not in the current architecture."
+        },
+        {
+          "id": "candidate",
+          "name": "GPS receiver candidate TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "accuracyDeg": null
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "acs-computer",
+      "name": "ACS computer",
+      "massKg": 10,
+      "powerW": 50,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "ACS!B10:D10",
+      "notes": "Workbook note: Pirat et al. Possible overlap with Instrumentation computer; retained as a dedicated controller pending confirmation.",
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {},
+  "notes": [
+    "ACS known estimate is 67.625 kg and 295.6 W per segment, excluding the 25 kg propulsion allowance.",
+    "RW power and mass are per wheel; group.quantity is the number used in the budget. No active, failed or minimum-availability counts are modeled.",
+    "Magnetometer, star tracker, star scanner and GPS trades are optional. Their applicability depends on orbit and the formation-metrology architecture."
+  ],
+  "suggestions": []
+}

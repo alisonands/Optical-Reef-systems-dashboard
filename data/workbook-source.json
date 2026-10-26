@@ -1,0 +1,3553 @@
+{
+  "sourceFile": "BUDGETS_final.xlsx",
+  "readOnly": true,
+  "sheets": [
+    {
+      "name": "main",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Optical Reef size",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C1",
+              "value": "Subsystem",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D1",
+              "value": "Mass(kg)/seg",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E1",
+              "value": "Total mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F1",
+              "value": "Power/seg (W)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G1",
+              "value": "Total Power(W)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "A2",
+              "value": "FTF(m)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B2",
+              "value": 3,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Payload",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D2",
+              "value": 535.4268590217985,
+              "formula": "=Payload!B10",
+              "hyperlink": null
+            },
+            {
+              "cell": "E2",
+              "value": 3747.9880131525892,
+              "formula": "=D2*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F2",
+              "value": 267.71342951089923,
+              "formula": "=0.5*D2",
+              "hyperlink": null
+            },
+            {
+              "cell": "H2",
+              "value": "<-- power from [chat] estimate 0.3-0.7W/kg",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "M2",
+              "value": "Notes:",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "rings",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 1,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": "SC bus",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D3",
+              "value": 552.708129839714,
+              "formula": "='SC bus'!B9",
+              "hyperlink": null
+            },
+            {
+              "cell": "E3",
+              "value": 3868.956908877998,
+              "formula": "=D3*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F3",
+              "value": 455.6,
+              "formula": "='SC bus'!C9",
+              "hyperlink": null
+            },
+            {
+              "cell": "M3",
+              "value": "\\- Each sheet calculates per segment values",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Radius(m)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 1.5,
+              "formula": "=B2/2",
+              "hyperlink": null
+            },
+            {
+              "cell": "C4",
+              "value": "Bus shell",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D4",
+              "value": 340.083129839714,
+              "formula": "='SC bus'!D13",
+              "hyperlink": null
+            },
+            {
+              "cell": "E4",
+              "value": 2380.581908877998,
+              "formula": "=D4*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F4",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G4",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "M4",
+              "value": "\\- cumulative values in main sheet",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "segments",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B5",
+              "value": 7,
+              "formula": "=6*B3*(B3+1)/2 + 1",
+              "hyperlink": null
+            },
+            {
+              "cell": "C5",
+              "value": "Instrumentation",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D5",
+              "value": 35,
+              "formula": "=Instrumentation!B7",
+              "hyperlink": null
+            },
+            {
+              "cell": "E5",
+              "value": 245,
+              "formula": "=D5*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F5",
+              "value": 160,
+              "formula": "=Instrumentation!C7",
+              "hyperlink": null
+            },
+            {
+              "cell": "G5",
+              "value": 1120,
+              "formula": "=F5*B5",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "area(m2)/seg",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 5.845671475544961,
+              "formula": "=((3*SQRT(3))/2)*(B2/2)^2",
+              "hyperlink": null
+            },
+            {
+              "cell": "C6",
+              "value": "Power",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D6",
+              "value": 55,
+              "formula": "=Power!B6",
+              "hyperlink": null
+            },
+            {
+              "cell": "E6",
+              "value": 385,
+              "formula": "=D6*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F6",
+              "value": 0,
+              "formula": "=Power!C6",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "height(bus)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B7",
+              "value": 1,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C7",
+              "value": "Thermal",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D7",
+              "value": 5,
+              "formula": "=Thermal!B10",
+              "hyperlink": null
+            },
+            {
+              "cell": "E7",
+              "value": 35,
+              "formula": "=D7*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F7",
+              "value": 0,
+              "formula": "=Thermal!C10",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Total area(m2)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B8",
+              "value": 40.91970032881472,
+              "formula": "=(B4^2*3*SQRT(3)/2)*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "C8",
+              "value": "Propulsion (dry)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D8",
+              "value": 25,
+              "formula": "='SC bus'!B8",
+              "hyperlink": null
+            },
+            {
+              "cell": "E8",
+              "value": 175,
+              "formula": "=D8*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F8",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G8",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "Total areal density(kg/m2)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B9",
+              "value": 209.1486341563316,
+              "formula": "=E12/B8",
+              "hyperlink": null
+            },
+            {
+              "cell": "C9",
+              "value": "ACS",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D9",
+              "value": 92.625,
+              "formula": "=ACS!B11",
+              "hyperlink": null
+            },
+            {
+              "cell": "E9",
+              "value": 648.375,
+              "formula": "=D9*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F9",
+              "value": 295.6,
+              "formula": "=ACS!C11",
+              "hyperlink": null
+            },
+            {
+              "cell": "G9",
+              "value": 2069.2000000000003,
+              "formula": "=F9*B5",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "cell": "A10",
+              "value": "Total Diameter",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B10",
+              "value": 3,
+              "formula": "=B2*2*(B3-1)+3",
+              "hyperlink": null
+            },
+            {
+              "cell": "C10",
+              "value": "Propulsion (wet)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D10",
+              "value": 329.8229451574279,
+              "formula": "=0.07*D13",
+              "hyperlink": null
+            },
+            {
+              "cell": "E10",
+              "value": 2308.7606161019953,
+              "formula": "=D10*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F10",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G10",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "cell": "C12",
+              "value": "CBE",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D12",
+              "value": 1417.9579340189405,
+              "formula": "=SUM(D2:D3,D10)",
+              "hyperlink": null
+            },
+            {
+              "cell": "E12",
+              "value": 8558.299433857992,
+              "formula": "=SUM(E3,E4,E10)",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 13,
+          "cells": [
+            {
+              "cell": "C13",
+              "value": "Launch mass (expected)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D13",
+              "value": 4711.756359391827,
+              "formula": "=8.8*D2",
+              "hyperlink": null
+            },
+            {
+              "cell": "E13",
+              "value": 32982.29451574279,
+              "formula": "=D13*B5",
+              "hyperlink": null
+            },
+            {
+              "cell": "F13",
+              "value": 2355.8781796959133,
+              "formula": "=0.5*D13",
+              "hyperlink": null
+            },
+            {
+              "cell": "G13",
+              "value": 16491.147257871395,
+              "formula": "=F13*B5",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 19,
+          "cells": [
+            {
+              "cell": "C19",
+              "value": "Optical Reef",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D19",
+              "value": "% mass of total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F19",
+              "value": "% power of total",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 20,
+          "cells": [
+            {
+              "cell": "C20",
+              "value": "Payload",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D20",
+              "value": 0.37760419133466794,
+              "formula": "=D2/D12",
+              "hyperlink": null
+            },
+            {
+              "cell": "E20",
+              "value": "<--",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 21,
+          "cells": [
+            {
+              "cell": "C21",
+              "value": "SC bus",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D21",
+              "value": 0.3897916268031765,
+              "formula": "=D3/D12",
+              "hyperlink": null
+            },
+            {
+              "cell": "E21",
+              "value": "<--",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 22,
+          "cells": [
+            {
+              "cell": "C22",
+              "value": "Bus shell",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D22",
+              "value": 0.23984006977965208,
+              "formula": "=D4/$D$12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 23,
+          "cells": [
+            {
+              "cell": "C23",
+              "value": "Instrumentation",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D23",
+              "value": 0.024683383872185088,
+              "formula": "=D5/$D$12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 24,
+          "cells": [
+            {
+              "cell": "C24",
+              "value": "Power",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D24",
+              "value": 0.03878817465629085,
+              "formula": "=D6/$D$12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 25,
+          "cells": [
+            {
+              "cell": "C25",
+              "value": "Thermal",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D25",
+              "value": 0.003526197696026441,
+              "formula": "=D7/$D$12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 26,
+          "cells": [
+            {
+              "cell": "C26",
+              "value": "Propulsion (dry)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D26",
+              "value": 0.017630988480132205,
+              "formula": "=D8/$D$12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 27,
+          "cells": [
+            {
+              "cell": "C27",
+              "value": "ACS",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D27",
+              "value": 0.06532281231888981,
+              "formula": "=D9/$D$12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 28,
+          "cells": [
+            {
+              "cell": "C28",
+              "value": "Solar panels",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D28",
+              "value": 0.012367795973276476,
+              "formula": "=Power!B4/main!D12",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 29,
+          "cells": [
+            {
+              "cell": "C29",
+              "value": "Propulsion(wet)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D29",
+              "value": 0.23260418186215548,
+              "formula": "=D10/D12",
+              "hyperlink": null
+            },
+            {
+              "cell": "E29",
+              "value": "<--",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 30,
+          "cells": [
+            {
+              "cell": "C30",
+              "value": "Launch mass",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D30",
+              "value": 0.9999999999999999,
+              "formula": "=SUM(D21,D20,D29)",
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Payload",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Payload",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Power(W)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "Mirror",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 233.82685902179844,
+              "formula": "='Mirror mass'!D9",
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Actuators",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Mirror backplane assembly",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B5",
+              "value": 100,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Science Instrumentation",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 200,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Thermal control",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C7",
+              "value": 25,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D7",
+              "value": "\\-30to-100°C, 10-40 W --> passive thermal control, cold fingers, deep-space radiators [chat]",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Detector array",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "FGS",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B9",
+              "value": 1.6,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C9",
+              "value": 10.5,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "cell": "A10",
+              "value": "Total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B10",
+              "value": 535.4268590217985,
+              "formula": "=SUM(B3:B9)",
+              "hyperlink": null
+            },
+            {
+              "cell": "C10",
+              "value": 35.5,
+              "formula": "=SUM(C3:C9)",
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SC bus",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Spacecraft bus",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Power(W)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "ACS/ACDS",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 92.625,
+              "formula": "=ACS!B11",
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": 295.6,
+              "formula": "=ACS!C11",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Power",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 55,
+              "formula": "=Power!B6",
+              "hyperlink": null
+            },
+            {
+              "cell": "C4",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Thermal",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B5",
+              "value": 5,
+              "formula": "=Thermal!B10",
+              "hyperlink": null
+            },
+            {
+              "cell": "C5",
+              "value": 0,
+              "formula": "=Thermal!C10",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Instrumentation",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 35,
+              "formula": "=Instrumentation!B7",
+              "hyperlink": null
+            },
+            {
+              "cell": "C6",
+              "value": 160,
+              "formula": "=Instrumentation!C7",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Bus shell",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B7",
+              "value": 340.083129839714,
+              "formula": "=D13",
+              "hyperlink": null
+            },
+            {
+              "cell": "C7",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Propulsion(Dry)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B8",
+              "value": 25,
+              "formula": "=ACS!B8",
+              "hyperlink": null
+            },
+            {
+              "cell": "C8",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "Total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B9",
+              "value": 552.708129839714,
+              "formula": "=SUM(B3:B8)",
+              "hyperlink": null
+            },
+            {
+              "cell": "C9",
+              "value": 455.6,
+              "formula": "=SUM(C3:C8)",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "cells": [
+            {
+              "cell": "A11",
+              "value": "Bus shell/structure estimate",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "cell": "A12",
+              "value": "SC Bus material",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B12",
+              "value": "Density(g/cm3)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C12",
+              "value": "Density(kg/m3)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D12",
+              "value": "Total mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 13,
+          "cells": [
+            {
+              "cell": "A13",
+              "value": "AluminUm 6061",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B13",
+              "value": 2.7,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C13",
+              "value": 2700,
+              "formula": "=B13*1000",
+              "hyperlink": null
+            },
+            {
+              "cell": "D13",
+              "value": 340.083129839714,
+              "formula": "=$F$23*C13",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 14,
+          "cells": [
+            {
+              "cell": "A14",
+              "value": "Graphite composite",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B14",
+              "value": 1.6,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C14",
+              "value": 1600,
+              "formula": "=B14*1000",
+              "hyperlink": null
+            },
+            {
+              "cell": "D14",
+              "value": 201.53074360871938,
+              "formula": "=$F$23*C14",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 15,
+          "cells": [
+            {
+              "cell": "A15",
+              "value": "Titanium",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 16,
+          "cells": [
+            {
+              "cell": "A16",
+              "value": "SiC composite",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 18,
+          "cells": [
+            {
+              "cell": "A18",
+              "value": "Dimensions",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 19,
+          "cells": [
+            {
+              "cell": "C19",
+              "value": "Area(m^2)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D19",
+              "value": "# of parts",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E19",
+              "value": "Volume",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F19",
+              "value": "Total volume",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 20,
+          "cells": [
+            {
+              "cell": "B20",
+              "value": "rectangles: ",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C20",
+              "value": 1.5,
+              "formula": "=main!B4*main!B7",
+              "hyperlink": null
+            },
+            {
+              "cell": "D20",
+              "value": 6,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E20",
+              "value": 0.0075,
+              "formula": "=C20*B23",
+              "hyperlink": null
+            },
+            {
+              "cell": "F20",
+              "value": 0.045,
+              "formula": "=E20*D20",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 21,
+          "cells": [
+            {
+              "cell": "B21",
+              "value": "hexagons:",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C21",
+              "value": 5.845671475544961,
+              "formula": "=main!B6",
+              "hyperlink": null
+            },
+            {
+              "cell": "D21",
+              "value": 2,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E21",
+              "value": 0.029228357377724806,
+              "formula": "=C21*B23",
+              "hyperlink": null
+            },
+            {
+              "cell": "F21",
+              "value": 0.05845671475544961,
+              "formula": "=E21*D21",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 22,
+          "cells": [
+            {
+              "cell": "B22",
+              "value": "central support:",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C22",
+              "value": 0.75,
+              "formula": "=(main!B4/2)*main!B7",
+              "hyperlink": null
+            },
+            {
+              "cell": "D22",
+              "value": 6,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E22",
+              "value": 0.00375,
+              "formula": "=C22*B23",
+              "hyperlink": null
+            },
+            {
+              "cell": "F22",
+              "value": 0.0225,
+              "formula": "=E22*D22",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 23,
+          "cells": [
+            {
+              "cell": "A23",
+              "value": "Wall thickness(m):",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B23",
+              "value": 0.005,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F23",
+              "value": 0.12595671475544962,
+              "formula": "=F20+F21+F22",
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Power",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Power",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "System total load(W)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D2",
+              "value": "Efficiency",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G2",
+              "value": "Function",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "Batteries (Li-ion)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 7.06,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": 1093.7,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G3",
+              "value": "Power source",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Solar panels",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 17.537014426634883,
+              "formula": "=3*main!B6",
+              "hyperlink": null
+            },
+            {
+              "cell": "F4",
+              "value": "~3kg/m2",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G4",
+              "value": "Power source",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Power Control Unit (PCU)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 55,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C6",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "                          ",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thermal",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Thermal",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Power(W)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D2",
+              "value": "Notes",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "Coolers",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 5,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Insulation",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Radiator",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Heat pipe",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D6",
+              "value": "Hydrogen/Nitrogen/acetone. Depends on working temp.",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Thermostat",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Louvers",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D8",
+              "value": "https://www.tmt-ipe.com/product-sheets ",
+              "formula": null,
+              "hyperlink": "https://www.tmt-ipe.com/product-sheets"
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "Heater--> Patch/RHU",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "cell": "A10",
+              "value": "Total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B10",
+              "value": 5,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "cells": [
+            {
+              "cell": "A11",
+              "value": "cbe",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B11",
+              "value": "~20",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C11",
+              "value": "~100-500",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Instrumentation",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Instrumentation",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Power(W)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "C&DH",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 15,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": 50,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D3",
+              "value": "<-- estimation from JWST payload design",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Comms",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 10,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C4",
+              "value": 60,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D4",
+              "value": "<-- estimation from JWST payload design",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "FGS",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Computer",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 10,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C6",
+              "value": 50,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D6",
+              "value": "<-- estimation from Ariel payload design",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B7",
+              "value": 35,
+              "formula": "=SUM(B3:B6)",
+              "hyperlink": null
+            },
+            {
+              "cell": "C7",
+              "value": 160,
+              "formula": "=SUM(C3:C6)",
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ACS",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "ACS",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass(kg)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Power(W)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "RWs",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 48,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": 200,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D3",
+              "value": "\\- approx 4 rws @ 12kg, w ~0.012-0.4 Nm",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "FGS",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 1.6,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C4",
+              "value": 10.5,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D4",
+              "value": "<-- estimation from Ariel payload design",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "IMU",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B5",
+              "value": 8,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C5",
+              "value": 35,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D5",
+              "value": "https://www.cielo-inertial.com/wp-content/uploads/2019/10/Cielo_Starlight_1000_IRU24_Datasheet.pdf ",
+              "formula": null,
+              "hyperlink": "https://www.cielo-inertial.com/wp-content/uploads/2019/10/Cielo_Starlight_1000_IRU24_Datasheet.pdf"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "CMG",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D6",
+              "value": "<-- either this or RWs. Don’t need both",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Sun sensor",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B7",
+              "value": 0.025,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C7",
+              "value": 0.1,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D7",
+              "value": "¯\\_(ツ)_/¯ , negligible",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Propulsion(dry)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B8",
+              "value": 25,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C8",
+              "value": 0,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "Magnetorquer",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D9",
+              "value": "<-- prob don't need in L2 orbit",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "cell": "A10",
+              "value": "Computer",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B10",
+              "value": 10,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C10",
+              "value": 50,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D10",
+              "value": "<-- from pirat et.al",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "cells": [
+            {
+              "cell": "A11",
+              "value": "Total",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B11",
+              "value": 92.625,
+              "formula": "=SUM(B3:B10)",
+              "hyperlink": null
+            },
+            {
+              "cell": "C11",
+              "value": 295.6,
+              "formula": "=SUM(C3:C10)",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "cell": "E12",
+              "value": "RW mass",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mirror mass",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "C1",
+              "value": "Subsystem",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D1",
+              "value": "Weight per segment",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E1",
+              "value": "Ariel density kg/m^2",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F1",
+              "value": "Total mass",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G1",
+              "value": "Additional notes",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H1",
+              "value": "Density(kg/m3)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "I1",
+              "value": "Notes/Sources",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "A2",
+              "value": "FTF(m)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B2",
+              "value": 3,
+              "formula": "=main!B2",
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Mirrors",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "rings",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 1,
+              "formula": "=main!B3",
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": "Beryllium",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D3",
+              "value": 157.83312983971393,
+              "formula": "=$B$5*E3",
+              "hyperlink": null
+            },
+            {
+              "cell": "E3",
+              "value": 27,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F3",
+              "value": 946.9987790382836,
+              "formula": "=D3*$B$4",
+              "hyperlink": null
+            },
+            {
+              "cell": "G3",
+              "value": "from JWST",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H3",
+              "value": 1850,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "I3",
+              "value": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/telescope-overview/\nMass/radius ratio: (see notes for calculations)",
+              "formula": null,
+              "hyperlink": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/telescope-overview/?utm_source=chatgpt.com"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "segments",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 6,
+              "formula": "=6*B3*(B3+1)/2",
+              "hyperlink": null
+            },
+            {
+              "cell": "C4",
+              "value": "Zerodur",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D4",
+              "value": 0,
+              "formula": "=$B$5*E4",
+              "hyperlink": null
+            },
+            {
+              "cell": "F4",
+              "value": 0,
+              "formula": "=D4*$B$4",
+              "hyperlink": null
+            },
+            {
+              "cell": "H4",
+              "value": 2530,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "I4",
+              "value": "pirat et al. paper (autonomous assembly of large telescopes)",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "area/segment",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B5",
+              "value": 5.845671475544961,
+              "formula": "=((3*SQRT(3))/2)*(B2/2)^2",
+              "hyperlink": null
+            },
+            {
+              "cell": "C5",
+              "value": "SiC",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D5",
+              "value": 701.4805770653953,
+              "formula": "=$B$5*E5",
+              "hyperlink": null
+            },
+            {
+              "cell": "E5",
+              "value": 120,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F5",
+              "value": 4208.883462392372,
+              "formula": "=D5*$B$4",
+              "hyperlink": null
+            },
+            {
+              "cell": "G5",
+              "value": "low density designs go down to 20~40 ariel density",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Total area",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 35.07402885326976,
+              "formula": "=(B7^2*3*SQRT(3)/2)*B4",
+              "hyperlink": null
+            },
+            {
+              "cell": "C6",
+              "value": "SiC(lightweighted, see notes)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D6",
+              "value": 192.90715869298373,
+              "formula": "=$B$5*E6",
+              "hyperlink": null
+            },
+            {
+              "cell": "E6",
+              "value": 33,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F6",
+              "value": 1157.4429521579023,
+              "formula": "=D6*$B$4",
+              "hyperlink": null
+            },
+            {
+              "cell": "G6",
+              "value": "^^",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Radius",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B7",
+              "value": 1.5,
+              "formula": "=B2/2",
+              "hyperlink": null
+            },
+            {
+              "cell": "C7",
+              "value": "Aluminium",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D7",
+              "value": 0,
+              "formula": "=$B$5*E7",
+              "hyperlink": null
+            },
+            {
+              "cell": "F7",
+              "value": 0,
+              "formula": "=D7*$B$4",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Ariel density",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B8",
+              "value": 0.025,
+              "formula": "=B5/D9",
+              "hyperlink": null
+            },
+            {
+              "cell": "C8",
+              "value": "ULE",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D8",
+              "value": 1075.0189843527185,
+              "formula": "=$B$5*E8",
+              "hyperlink": null
+            },
+            {
+              "cell": "E8",
+              "value": 183.9,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F8",
+              "value": 6450.11390611631,
+              "formula": "=D8*$B$4",
+              "hyperlink": null
+            },
+            {
+              "cell": "G8",
+              "value": "Hubble",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H8",
+              "value": 2210,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "B9",
+              "value": "^!!",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C9",
+              "value": "ULE(lightweighted)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D9",
+              "value": 233.82685902179844,
+              "formula": "=$B$5*E9",
+              "hyperlink": null
+            },
+            {
+              "cell": "E9",
+              "value": 40,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F9",
+              "value": 1402.9611541307906,
+              "formula": "=D9*$B$4",
+              "hyperlink": null
+            },
+            {
+              "cell": "G9",
+              "value": "RST",
+              "formula": null,
+              "hyperlink": "https://ntrs.nasa.gov/api/citations/20220016563/downloads/2022_Mirror_Tech_Days_Roman_OTA_status_for%20approval.pdf"
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "cells": [
+            {
+              "cell": "C11",
+              "value": "Truss",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "cell": "C12",
+              "value": "Mirror flexures",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mirror_trades0",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Substrate",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B1",
+              "value": "Density (g/cm3)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C1",
+              "value": "Reflectivity/throughput",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D1",
+              "value": "Thermal expansion\n(CTE)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E1",
+              "value": "Thermal \nconductivity",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F1",
+              "value": "Stiffness(GPa)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G1",
+              "value": "Specific stiffness",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H1",
+              "value": "Structural stability",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "I1",
+              "value": "Cost",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "J1",
+              "value": "Manufacturability",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "K1",
+              "value": "Weighted sum",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "L1",
+              "value": "Sources: https://www.newport.com/g/optical-mirror-selection-guide \nhttps://www.coherent.com/news/blog/aluminum-mirrors-space-telescopes ",
+              "formula": null,
+              "hyperlink": "https://www.newport.com/g/optical-mirror-selection-guide"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "A2",
+              "value": "Fused Silica",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B2",
+              "value": 2.2,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D2",
+              "value": "Low (0.55)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E2",
+              "value": "Low (1.4)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F2",
+              "value": "Moderate (73)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G2",
+              "value": 33.18181818181818,
+              "formula": "=73/2.2",
+              "hyperlink": null
+            },
+            {
+              "cell": "L2",
+              "value": "https://accuratus.com/fused.html",
+              "formula": null,
+              "hyperlink": "https://accuratus.com/fused.html"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "SiC",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": "~2.1-3.2",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D3",
+              "value": "Low (4)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E3",
+              "value": "High (120)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F3",
+              "value": "V. High (410)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G3",
+              "value": 128.125,
+              "formula": "=410/3.2",
+              "hyperlink": null
+            },
+            {
+              "cell": "H3",
+              "value": "Weak/Brittle",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "L3",
+              "value": "https://accuratus.com/silicar.html",
+              "formula": null,
+              "hyperlink": "https://accuratus.com/silicar.html"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Zerodur",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B4",
+              "value": 2.53,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D4",
+              "value": "V. Low (0.1)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E4",
+              "value": "Low (1.7)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F4",
+              "value": "Moderate (90)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G4",
+              "value": 35.57312252964427,
+              "formula": "=90/2.53",
+              "hyperlink": null
+            },
+            {
+              "cell": "I4",
+              "value": "Moderate, costly fabrication",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Borosilicate",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B5",
+              "value": 2.23,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D5",
+              "value": "Low (3.25)",
+              "formula": null,
+              "hyperlink": "https://www.newport.com/g/optical-mirror-selection-guide"
+            },
+            {
+              "cell": "E5",
+              "value": "Low (1.1)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F5",
+              "value": "Moderate (64)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G5",
+              "value": 28.699551569506728,
+              "formula": "=64/2.23",
+              "hyperlink": null
+            },
+            {
+              "cell": "H5",
+              "value": "Weak/Brittle",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Beryllium",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B6",
+              "value": 1.85,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D6",
+              "value": "Low",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E6",
+              "value": 190,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F6",
+              "value": "High (287)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G6",
+              "value": 155.13513513513513,
+              "formula": "=287/1.85",
+              "hyperlink": null
+            },
+            {
+              "cell": "I6",
+              "value": "High",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "ULE",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "Weights(1-5)-->",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C9",
+              "value": 4,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D9",
+              "value": 5,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F9",
+              "value": 4,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G9",
+              "value": 3,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "cell": "A12",
+              "value": "Coating",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B12",
+              "value": "Density (g/cm3)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C12",
+              "value": "Reflectivity/throughput",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D12",
+              "value": "Thermal expansion\n(CTE)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E12",
+              "value": "Thermal \nconductivity",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F12",
+              "value": "Stiffness(GPa)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H12",
+              "value": "Structural stability",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "I12",
+              "value": "Cost",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "J12",
+              "value": "Wavelength",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 13,
+          "cells": [
+            {
+              "cell": "A13",
+              "value": "Aluminum",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B13",
+              "value": 2.7,
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C13",
+              "value": "90-92% for optical",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D13",
+              "value": "High (23.6)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E13",
+              "value": "High (205)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F13",
+              "value": "Low",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "L13",
+              "value": "https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/Overview-of-Aluminum-Related-Coatings-and-Their-Properties.pdf ",
+              "formula": null,
+              "hyperlink": "https://wp.optics.arizona.edu/optomech/wp-content/uploads/sites/53/2016/10/Overview-of-Aluminum-Related-Coatings-and-Their-Properties.pdf"
+            }
+          ]
+        },
+        {
+          "row": 14,
+          "cells": [
+            {
+              "cell": "A14",
+              "value": "Dielectric",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C14",
+              "value": "v. High >99% ",
+              "formula": null,
+              "hyperlink": "https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=6636"
+            },
+            {
+              "cell": "D14",
+              "value": "~0.5",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "J14",
+              "value": "400-750nm",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "L14",
+              "value": "Fused Silica",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 15,
+          "cells": [
+            {
+              "cell": "A15",
+              "value": "Silver",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C15",
+              "value": "v. High ~98%",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D15",
+              "value": "High(19)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F15",
+              "value": "Moderate (~76)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H15",
+              "value": "Weak (needs protective coatings)",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "I15",
+              "value": "High",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 17,
+          "cells": [
+            {
+              "cell": "A17",
+              "value": "Actuators",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 18,
+          "cells": [
+            {
+              "cell": "A18",
+              "value": "Piezoelectric",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 19,
+          "cells": [
+            {
+              "cell": "A19",
+              "value": "MEMS",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "B1",
+              "value": "Mass",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "A2",
+              "value": "Truss structure",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "Docking mechanism",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Sunshield",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Vibrational modes",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "cell": "A6",
+              "value": "Structure and mechanisms:",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Actuators",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "A8",
+              "value": "Propulsion",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B8",
+              "value": 228.5201834305036,
+              "formula": "=main!D13*0.0485",
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "Science instrumentation --> detector??",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Intertia+torque",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Inertia",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B1",
+              "value": "see p 52",
+              "formula": null,
+              "hyperlink": "https://www.nasa.gov/wp-content/uploads/2024/04/optics-xrcf-techdays2015-17-nasa-atlast-12-sls.pdf?emrc=9f3ef6"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "B2",
+              "value": "Mass",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C2",
+              "value": "Model",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D2",
+              "value": "Inertia",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E2",
+              "value": "Diameter",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "F2",
+              "value": "Depth",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "G2",
+              "value": "COM",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "H2",
+              "value": "<-- relative to middle of primary mirror thickness",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "SC bus",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "B3",
+              "value": 3868.956908877998,
+              "formula": "=main!E3",
+              "hyperlink": null
+            },
+            {
+              "cell": "C3",
+              "value": "Hexagon",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E3",
+              "value": 3,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "Primary support structure ",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C4",
+              "value": "??",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "Primary Mirror",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C5",
+              "value": "Hexagon",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E5",
+              "value": 3,
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "cell": "A7",
+              "value": "Solar pressure",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "cell": "B8",
+              "value": "Area",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "C8",
+              "value": "Center of pressure",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "D8",
+              "value": "Torque",
+              "formula": null,
+              "hyperlink": null
+            },
+            {
+              "cell": "E8",
+              "value": "Momentum",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "cell": "A9",
+              "value": "SC bus",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "cell": "A10",
+              "value": "Net torque",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Launch systems",
+      "rows": []
+    },
+    {
+      "name": "Sheet50",
+      "rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Edit-able cells",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "cell": "A2",
+              "value": "Estimates from ratios",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "cells": [
+            {
+              "cell": "A3",
+              "value": "is gut 👍",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "cell": "A4",
+              "value": "¯\\_(ツ)_/¯ ",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "cell": "A5",
+              "value": "ignore",
+              "formula": null,
+              "hyperlink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

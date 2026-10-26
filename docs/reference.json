@@ -1,0 +1,188 @@
+{
+  "title": "Requirements & cases",
+  "description": "Planning register for the concept. Numeric requirements and verification criteria remain TBD where the workbook does not provide them.",
+  "requirements": [
+    {
+      "id": "SYS-001",
+      "topic": "Modular aperture",
+      "description": "Assemble the primary aperture autonomously from hexagonal spacecraft segments.",
+      "target": null,
+      "unit": null,
+      "verification": "Assembly sequence and end-to-end demonstration: TBD",
+      "source": "Concept definition",
+      "status": "TBD"
+    },
+    {
+      "id": "SYS-002",
+      "topic": "Free-floating optics",
+      "description": "Maintain the required relative positions and attitudes of the aperture and detector for the three-mirror anastigmat architecture.",
+      "target": null,
+      "unit": "m / deg",
+      "verification": "Optical prescription and formation-control simulation: TBD",
+      "source": "Concept definition",
+      "status": "TBD"
+    },
+    {
+      "id": "ACS-001",
+      "topic": "Pointing and jitter",
+      "description": "Allocate pointing accuracy, stability, momentum storage and disturbance-rejection performance to sensors, reaction wheels and propulsion.",
+      "target": null,
+      "unit": "deg / N·m / N·m·s",
+      "verification": "Disturbance and control model: TBD",
+      "source": "ACS!D3 gives only an approximate wheel torque range, not an allocated requirement",
+      "status": "TBD"
+    },
+    {
+      "id": "PAY-001",
+      "topic": "Wavefront error",
+      "description": "Allocate segment figure, alignment, metrology and residual wavefront error after nonlinear optical correction.",
+      "target": null,
+      "unit": "nm RMS",
+      "verification": "Optical propagation and correction simulation: TBD",
+      "source": "Concept definition",
+      "status": "TBD"
+    },
+    {
+      "id": "SYS-003",
+      "topic": "Mass allocation",
+      "description": "Set the segment spacecraft, detector spacecraft and observatory mass allocations after architecture and launch assumptions are defined.",
+      "target": null,
+      "unit": "kg",
+      "verification": "Mass budget and hardware estimates",
+      "source": "main!D12:E13 contain estimates, not approved allocations",
+      "status": "TBD"
+    },
+    {
+      "id": "PWR-001",
+      "topic": "Electrical supply",
+      "description": "Size generation and storage against local spacecraft loads, illumination and eclipse duration.",
+      "target": null,
+      "unit": "W / Wh",
+      "verification": "Per-spacecraft energy balance: TBD",
+      "source": "Power!C3 is a system-load estimate; no array output or battery energy rating is supplied",
+      "status": "TBD"
+    },
+    {
+      "id": "THM-001",
+      "topic": "Optical temperatures",
+      "description": "Define allowable mirror, detector and bus temperatures and gradients from the optical and thermal designs.",
+      "target": null,
+      "unit": "°C / K",
+      "verification": "Thermal network and thermoelastic analysis: TBD",
+      "source": "Payload!D7 contains a preliminary temperature note; it is not a qualified operating range",
+      "status": "TBD"
+    },
+    {
+      "id": "COM-001",
+      "topic": "Communications and coordination",
+      "description": "Define inter-segment control, metrology and science data rates, latency, synchronization and ground-link requirements.",
+      "target": null,
+      "unit": "bit/s / s",
+      "verification": "Data-flow and link-budget analysis: TBD",
+      "source": "Instrumentation!B4:C4 supplies mass and power estimates only",
+      "status": "TBD"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-01",
+      "name": "Current configuration",
+      "purpose": "The current geometry and selected trade options shown throughout the dashboard.",
+      "inputs": "data/project.json and selected options in each subsystem JSON",
+      "openItems": "Confirm equipment sharing, one-off spacecraft scope and unresolved mass and power inputs.",
+      "status": "Working baseline"
+    },
+    {
+      "id": "CASE-02",
+      "name": "Aperture scaling",
+      "purpose": "Compare the effect of ring count and segment flat-to-flat dimension on aperture area and repeated spacecraft budgets.",
+      "inputs": "Overview geometry sliders",
+      "openItems": "Assembly topology, segment gaps and nonrepeating equipment sizing remain TBD.",
+      "status": "Available"
+    },
+    {
+      "id": "CASE-03",
+      "name": "Hardware trades",
+      "purpose": "Compare selected propulsion, ACS, power, structure and payload options using the current geometry.",
+      "inputs": "Trade selections at the bottom of each subsystem page",
+      "openItems": "Replace missing ratings and record manufacturer source dates before comparing complete budgets.",
+      "status": "Available"
+    },
+    {
+      "id": "CASE-04",
+      "name": "Formation and optical performance",
+      "purpose": "Connect the control model, metrology and nonlinear optical correction to the relative-pose and wavefront allocations.",
+      "inputs": "Future dynamics and optical model",
+      "openItems": "Optical prescription, separation distances, disturbance spectra and controller definitions.",
+      "status": "Planned"
+    }
+  ],
+  "environment": [
+    {
+      "topic": "Orbit and illumination",
+      "value": "TBD",
+      "source": "The workbook does not specify an orbit or eclipse profile.",
+      "notes": "The former dashboard used 1 AU, 24 h sunlight and 0 h eclipse as illustrative assumptions. Confirm these in the editable project inputs before using energy calculations."
+    },
+    {
+      "topic": "Payload thermal note",
+      "value": "−100 to −30 °C; 10–40 W",
+      "source": "Payload!D7",
+      "notes": "Preliminary workbook note attributed to a chat estimate. A component-specific qualified temperature range is TBD. Payload!C7 budgets 25 W."
+    },
+    {
+      "topic": "Thermal subsystem estimates",
+      "value": "5 kg cooler baseline; separate rough note ~20 kg and ~100–500 W",
+      "source": "Thermal!B3, B10, B11:C11",
+      "notes": "The rough subsystem note is an alternative estimate, not an additional piece of hardware or a validated power rating."
+    },
+    {
+      "topic": "Propulsion sizing environment",
+      "value": "TBD",
+      "source": "ACS!B8 and main!D10:D13",
+      "notes": "The workbook supplies 25 kg dry propulsion and a ratio-based propellant allowance. It does not provide delta-v, specific impulse, tank pressure, propellant density, burn direction or burn duration."
+    }
+  ],
+  "traceability": [
+    {
+      "topic": "Source workbook",
+      "source": "BUDGETS_final.xlsx",
+      "decision": "Retain source cells beside equipment, estimates and trade properties. Workbook values are preliminary concept inputs unless a specific source is recorded."
+    },
+    {
+      "topic": "Geometry convention",
+      "source": "main!B2:B6 and Mirror mass!B2:B5",
+      "decision": "The input labelled FTF in the workbook is used as corner-to-corner in its area equation. The dashboard uses true flat-to-flat distance. The main sheet includes the centre segment; the mirror sheet omits it. Use one consistent segment count for all repeated subsystem budgets."
+    },
+    {
+      "topic": "Propulsion ownership",
+      "source": "ACS!B8:B11 and SC bus!B3:B9",
+      "decision": "Assign dry propulsion to Propulsion and count it once. The source ACS total already includes its 25 kg dry propulsion allowance."
+    },
+    {
+      "topic": "Electrical load basis",
+      "source": "Payload!C10; main!F2; Power!C3",
+      "decision": "Use identified subsystem loads in the rollup. The payload mass-to-power proxy and the 1093.7 W system total load are separate source estimates, not additional equipment loads or generation ratings."
+    },
+    {
+      "topic": "Shared guidance hardware",
+      "source": "Payload!B9:C9 and ACS!B4:C4",
+      "decision": "Both sheets list a 1.6 kg, 10.5 W fine guidance sensor. The current model assigns this equipment once to ACS as an explicit architecture assumption. The workbook does not establish equipment identity; confirm whether a separate payload unit is needed."
+    },
+    {
+      "topic": "Computer allocation",
+      "source": "ACS!B10:C10 and Instrumentation!B3:C6",
+      "decision": "The source contains an ACS computer, a separate computer and a C&DH estimate. Their processing roles and possible shared hardware remain to be resolved."
+    },
+    {
+      "topic": "Free-floating detector",
+      "source": "Payload!A6:A8 and concept definition",
+      "decision": "The current model assigns the 200 kg science instrumentation estimate once to the free-floating detector platform as an architecture assumption. Its power, supporting bus and one-off optical elements remain TBD. The workbook estimate is not a complete detector spacecraft budget."
+    },
+    {
+      "topic": "Missing properties",
+      "source": "Blank workbook specification cells",
+      "decision": "Store unknown inputs as null and display TBD. Known subtotals remain visible with an incomplete indication; a blank rating must not become a measured zero."
+    }
+  ]
+}

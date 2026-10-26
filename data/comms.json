@@ -1,0 +1,89 @@
+{
+  "id": "comms",
+  "name": "Comms",
+  "subtitle": "Formation links and observatory communications",
+  "status": "WIP",
+  "color": "#83b5b9",
+  "scope": "segment",
+  "budget": {
+    "strategy": "selected"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Mass estimate",
+      "value": 10,
+      "unit": "kg",
+      "source": "Instrumentation!B4"
+    },
+    {
+      "label": "Power estimate",
+      "value": 60,
+      "unit": "W",
+      "source": "Instrumentation!C4"
+    },
+    {
+      "label": "Link architecture",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "environment": [
+    {
+      "label": "Earth range",
+      "value": null,
+      "unit": "km",
+      "source": null
+    },
+    {
+      "label": "Inter-segment range",
+      "value": null,
+      "unit": "m",
+      "source": null
+    },
+    {
+      "label": "Pointing constraints",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Interference environment",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "groups": [],
+  "components": [
+    {
+      "id": "comms",
+      "name": "Communications equipment",
+      "massKg": 10,
+      "powerW": 60,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Instrumentation!B4:D4",
+      "notes": "Workbook estimate based on JWST payload design. Includes no defined frequency, link budget or RF/optical terminal design.",
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {
+    "linkType": null,
+    "frequencyGhz": null,
+    "antennaGainDbi": null,
+    "transmitPowerW": null,
+    "dataRateMbps": null,
+    "latencyMs": null,
+    "rangeKm": null,
+    "linkMarginDb": null
+  },
+  "notes": [],
+  "suggestions": [
+    "Define independent Earth downlink and inter-spacecraft control/metrology links.",
+    "Track data rate, range, latency, terminal pointing and synchronization needs.",
+    "Develop a link budget when transmitter, antenna and receiver candidates are available."
+  ]
+}

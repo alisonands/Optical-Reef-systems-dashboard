@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#10181d">
+  <title>Optical Reef · Systems Engineering</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 57 18v28L32 60 7 46V18Z' fill='%239fd7c3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Optical Reef overview"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m24 3 18 10.5v21L24 45 6 34.5v-21Z" stroke="currentColor" stroke-width="1.2"/><path d="m24 12 10 6v12l-10 6-10-6V18Z" stroke="currentColor"/><path d="m24 3 0 9M6 13.5l8 4.5m20 0 8-4.5M6 34.5l8-4.5m20 0 8 4.5M24 36v9" stroke="currentColor"/></svg><span>OPTICAL REEF<small>SYSTEMS ENGINEERING</small></span></a>
+      <div class="nav-label">THE OBSERVATORY</div><nav id="nav" aria-label="Dashboard pages"></nav>
+      <div class="sidefoot"><span class="status-dot"></span> Concept study<br><span>Autonomously assembled.<br>Independently controlled.</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumb">Optical Reef <span>/</span> <span id="crumb">Overview</span></div><div class="top-actions"><span class="source-indicator"><span class="status-dot"></span> Workbook baseline</span><button class="quiet" id="reload" title="Reload JSON data and clear saved trade previews">↻ <span>Reload data</span></button></div></header>
+      <main id="content" tabindex="-1"><div class="loading">Loading the observatory model…</div></main>
+    </div>
+  </div>
+  <div id="announcer" class="sr-only" aria-live="polite"></div>
+  <script type="module" src="js/app.js"></script>
+  <script>if(location.protocol==='file:'){document.getElementById('content').innerHTML='<div class="load-error"><h1>Open the local dashboard</h1><p>Double-click <strong>start.command</strong> in this folder, or run <code>python3 server.py</code>, then open <a href="http://127.0.0.1:8765">localhost:8765</a>.</p><p>The local server lets the dashboard read your editable JSON files directly.</p></div>';}</script>
+</body></html>

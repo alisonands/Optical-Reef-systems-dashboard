@@ -1,0 +1,144 @@
+{
+  "id": "structure",
+  "name": "Structure",
+  "subtitle": "Bus material and geometric mass estimate",
+  "status": "Concept study",
+  "color": "#75a99b",
+  "scope": "segment",
+  "budget": {
+    "strategy": "structure"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Material",
+      "value": "Aluminum 6061",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Model",
+      "value": "Hexagonal shell plus radial supports",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "CAD asset",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "environment": [
+    {
+      "label": "Structural temperature",
+      "value": null,
+      "unit": "°C",
+      "source": null
+    },
+    {
+      "label": "Launch and assembly loads",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Deployment / docking interface",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "material",
+      "name": "Structural material trades",
+      "description": null,
+      "selectedId": "al6061",
+      "quantity": 1,
+      "budgeted": false,
+      "columns": [
+        {
+          "key": "densityGcm3",
+          "label": "Density",
+          "unit": "g/cm³"
+        },
+        {
+          "key": "densityKgM3",
+          "label": "Density",
+          "unit": "kg/m³"
+        }
+      ],
+      "options": [
+        {
+          "id": "al6061",
+          "name": "Aluminum 6061",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "SC bus!A13:D13",
+          "notes": "Workbook density. Mass is recalculated from corrected F2F geometry.",
+          "densityGcm3": 2.7,
+          "densityKgM3": 2700
+        },
+        {
+          "id": "graphite",
+          "name": "Graphite composite",
+          "massKg": null,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "SC bus!A14:D14",
+          "notes": "Workbook density. Layup, stiffness, joints and qualification are TBD.",
+          "densityGcm3": 1.6,
+          "densityKgM3": 1600
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "assembly-truss",
+      "name": "Assembly truss",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Misc!A2",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    },
+    {
+      "id": "docking",
+      "name": "Docking mechanism",
+      "massKg": null,
+      "powerW": null,
+      "quantity": 1,
+      "scope": "segment",
+      "source": "Misc!A3",
+      "notes": null,
+      "manufacturer": null,
+      "model": null
+    }
+  ],
+  "parameters": {
+    "heightM": 1,
+    "wallThicknessM": 0.005,
+    "endFaceCount": 1,
+    "radialSupportCount": 6,
+    "radialSupportLengthF2FFraction": 0.25,
+    "coverageFraction": 1,
+    "extraMassKg": 0,
+    "cadModelUrl": null
+  },
+  "notes": [
+    "Thin-wall shell model uses true hexagon perimeter and area. Height, thickness and support geometry remain editable in this file. No moment-of-inertia model is applied.",
+    "The workbook uses six side panels, two end faces and six support panels with length F2F/4. That support convention is retained explicitly, pending CAD definition.",
+    "The interactive shape is conceptual. Set parameters.cadModelUrl to link a project CAD asset; a native CAD importer is a future addition."
+  ],
+  "suggestions": []
+}

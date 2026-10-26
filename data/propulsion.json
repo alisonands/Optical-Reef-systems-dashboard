@@ -1,0 +1,447 @@
+{
+  "id": "propulsion",
+  "name": "Propulsion",
+  "subtitle": "Propellant, thrusters, tanks and pressurization",
+  "status": "Concept study",
+  "color": "#cc9b75",
+  "scope": "segment",
+  "budget": {
+    "strategy": "selected"
+  },
+  "estimate": {},
+  "overview": [
+    {
+      "label": "Architecture",
+      "value": "Dry-system allowance; technology TBD",
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Tank type",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Pressurant",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Propellant allowance",
+      "value": 329.8229451574279,
+      "unit": "kg",
+      "source": "main!D10"
+    },
+    {
+      "label": "Sizing basis",
+      "value": "Workbook heuristic: 7% of expected launch mass",
+      "unit": "",
+      "source": "main!D10; main!D13"
+    }
+  ],
+  "environment": [
+    {
+      "label": "Orbit / location",
+      "value": "L2 concept assumption",
+      "unit": "",
+      "source": "ACS!D9"
+    },
+    {
+      "label": "Pressure",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Propellant temperature",
+      "value": null,
+      "unit": "°C",
+      "source": null
+    },
+    {
+      "label": "Thermal compatibility",
+      "value": null,
+      "unit": null,
+      "source": null
+    },
+    {
+      "label": "Plume / contamination constraints",
+      "value": null,
+      "unit": null,
+      "source": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "technology",
+      "name": "Propulsion technology",
+      "description": null,
+      "selectedId": "workbook",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "specificImpulseS",
+          "label": "Specific impulse",
+          "unit": "s"
+        },
+        {
+          "key": "thrustN",
+          "label": "Thrust",
+          "unit": "N"
+        },
+        {
+          "key": "densityKgL",
+          "label": "Density",
+          "unit": "kg/L"
+        }
+      ],
+      "options": [
+        {
+          "id": "workbook",
+          "name": "Workbook dry-system allowance",
+          "massKg": 25,
+          "powerW": 0,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "ACS!B8:C8",
+          "notes": "25 kg is a complete dry-system allowance, including unspecified tank and feed equipment. Propellant is added separately. The explicit workbook power is 0 W; verify once hardware is chosen.",
+          "propellantType": null,
+          "specificImpulseS": null,
+          "thrustN": null,
+          "densityKgL": null,
+          "pressurePa": null,
+          "massFlowKgS": null,
+          "mixtureRatio": null,
+          "propellant1": null,
+          "propellant2": null,
+          "includesGroups": [
+            "tank",
+            "pressurization"
+          ]
+        },
+        {
+          "id": "biprop",
+          "name": "Bipropellant",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": "Enter core propulsion hardware mass and power excluding separately itemized tanks and pressurization. If entering a complete package, list its covered group IDs in includesGroups and use includedInPackage choices for those groups.",
+          "propellantType": "Bipropellant",
+          "specificImpulseS": null,
+          "thrustN": null,
+          "densityKgL": null,
+          "pressurePa": null,
+          "massFlowKgS": null,
+          "mixtureRatio": null,
+          "propellant1": null,
+          "propellant2": null,
+          "includesGroups": []
+        },
+        {
+          "id": "monoprop",
+          "name": "Monopropellant",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": "Enter core propulsion hardware mass and power excluding separately itemized tanks and pressurization. If entering a complete package, list its covered group IDs in includesGroups and use includedInPackage choices for those groups.",
+          "propellantType": "Monopropellant",
+          "specificImpulseS": null,
+          "thrustN": null,
+          "densityKgL": null,
+          "pressurePa": null,
+          "massFlowKgS": null,
+          "mixtureRatio": null,
+          "propellant1": null,
+          "propellant2": null,
+          "includesGroups": []
+        },
+        {
+          "id": "ep",
+          "name": "Electric propulsion",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": "Enter core propulsion hardware mass and power excluding separately itemized tanks and pressurization. If entering a complete package, list its covered group IDs in includesGroups and use includedInPackage choices for those groups.",
+          "propellantType": "Electric propulsion",
+          "specificImpulseS": null,
+          "thrustN": null,
+          "densityKgL": null,
+          "pressurePa": null,
+          "massFlowKgS": null,
+          "mixtureRatio": null,
+          "propellant1": null,
+          "propellant2": null,
+          "includesGroups": []
+        },
+        {
+          "id": "coldgas",
+          "name": "Cold gas",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": "Enter core propulsion hardware mass and power excluding separately itemized tanks and pressurization. If entering a complete package, list its covered group IDs in includesGroups and use includedInPackage choices for those groups.",
+          "propellantType": "Cold gas",
+          "specificImpulseS": null,
+          "thrustN": null,
+          "densityKgL": null,
+          "pressurePa": null,
+          "massFlowKgS": null,
+          "mixtureRatio": null,
+          "propellant1": null,
+          "propellant2": null,
+          "includesGroups": []
+        },
+        {
+          "id": "solid",
+          "name": "Solid motor",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": "Enter core propulsion hardware mass and power excluding separately itemized tanks and pressurization. If entering a complete package, list its covered group IDs in includesGroups and use includedInPackage choices for those groups.",
+          "propellantType": "Solid motor",
+          "specificImpulseS": null,
+          "thrustN": null,
+          "densityKgL": null,
+          "pressurePa": null,
+          "massFlowKgS": null,
+          "mixtureRatio": null,
+          "propellant1": null,
+          "propellant2": null,
+          "includesGroups": []
+        }
+      ],
+      "packageGroup": true
+    },
+    {
+      "id": "tank",
+      "name": "Tank architecture",
+      "description": "The baseline TBD choice is covered by the 25 kg complete dry-system allowance. Other choices are itemized and their mass/power flow into the budget. Selecting one makes the unsplit package remainder TBD; replace the package with a core-hardware option whose includesGroups is [] to finish the split.",
+      "selectedId": "tbd",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "massKg",
+          "label": "Unit mass",
+          "unit": "kg"
+        },
+        {
+          "key": "powerW",
+          "label": "Unit power",
+          "unit": "W"
+        },
+        {
+          "key": "pressurePa",
+          "label": "Pressure",
+          "unit": "Pa"
+        },
+        {
+          "key": "volumeL",
+          "label": "Volume",
+          "unit": "L"
+        }
+      ],
+      "options": [
+        {
+          "id": "tbd",
+          "name": "Tank type TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "includedInPackage": true
+        },
+        {
+          "id": "diaphragm",
+          "name": "Diaphragm",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurePa": null,
+          "volumeL": null,
+          "includedInPackage": false
+        },
+        {
+          "id": "bladder",
+          "name": "Bladder",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurePa": null,
+          "volumeL": null,
+          "includedInPackage": false
+        },
+        {
+          "id": "screen",
+          "name": "Capillary screen",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurePa": null,
+          "volumeL": null,
+          "includedInPackage": false
+        },
+        {
+          "id": "vane",
+          "name": "Capillary vane",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurePa": null,
+          "volumeL": null,
+          "includedInPackage": false
+        },
+        {
+          "id": "compressible",
+          "name": "Compressible",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurePa": null,
+          "volumeL": null,
+          "includedInPackage": false
+        }
+      ]
+    },
+    {
+      "id": "pressurization",
+      "name": "Pressurization",
+      "description": "The baseline TBD choice is covered by the 25 kg complete dry-system allowance. Other choices are itemized and their mass/power flow into the budget. Selecting one makes the unsplit package remainder TBD; replace the package with a core-hardware option whose includesGroups is [] to finish the split.",
+      "selectedId": "tbd",
+      "quantity": 1,
+      "budgeted": true,
+      "columns": [
+        {
+          "key": "pressurant",
+          "label": "Pressurant"
+        },
+        {
+          "key": "ullageFraction",
+          "label": "Ullage fraction"
+        }
+      ],
+      "options": [
+        {
+          "id": "tbd",
+          "name": "Pressurization TBD",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "includedInPackage": true
+        },
+        {
+          "id": "blowdown",
+          "name": "Blowdown",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurant": null,
+          "ullageFraction": null,
+          "includedInPackage": false
+        },
+        {
+          "id": "regulated",
+          "name": "Regulated pressurization",
+          "massKg": null,
+          "powerW": null,
+          "manufacturer": null,
+          "model": null,
+          "url": null,
+          "source": "User study outline",
+          "notes": null,
+          "pressurant": null,
+          "ullageFraction": null,
+          "includedInPackage": false
+        }
+      ]
+    }
+  ],
+  "components": [],
+  "parameters": {
+    "sizingMode": "allowance",
+    "loadedPropellantKg": 329.8229451574279,
+    "loadedPropellantSource": "main!D10 = 0.07 × main!D13",
+    "deltaVMs": null,
+    "reserveFraction": 0,
+    "specificImpulseS": null,
+    "thrustN": null,
+    "densityKgL": null,
+    "pressurePa": null,
+    "totalImpulseNs": null,
+    "rotationRateDegS": null,
+    "thrustDirection": null,
+    "thrustDurationS": null,
+    "mixtureRatio": null,
+    "propellant1": null,
+    "propellant2": null,
+    "ullageFraction": null
+  },
+  "notes": [
+    "Dry propulsion is counted once here and removed from the ACS aggregate.",
+    "The loaded propellant allowance is copied from the workbook. It is a launch-mass heuristic, not a delta-v prediction. Set parameters.sizingMode to rocketEquation after entering delta-v and specific impulse to replace it with a calculated load.",
+    "Translational delta-v and rotational rates are separate inputs. No trajectory, torque allocation, minimum impulse bit or plume model is solved.",
+    "Tank and pressurization candidates roll up their own mass and power. The baseline TBD choices use includedInPackage:true and are covered by the dry package. If a group is itemized, the combined package allowance becomes TBD to avoid counting that hardware twice. Enter a core-hardware option with includesGroups:[] after separating the package. No source split is invented.",
+    "The source propellant allowance is held at its workbook cached value until edited or replaced by rocket-equation sizing. It does not rescale with mirror geometry."
+  ],
+  "suggestions": []
+}
